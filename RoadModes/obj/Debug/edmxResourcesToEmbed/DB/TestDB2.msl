@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="RoadsModel2StoreContainer" CdmEntityContainer="RoadsEntities2">
+    <EntitySetMapping Name="ROAD_LAYERZ">
+      <EntityTypeMapping TypeName="RoadsModel2.ROAD_LAYERZ">
+        <MappingFragment StoreEntitySet="ROAD_LAYERZ">
+          <ScalarProperty Name="SEG_ID" ColumnName="SEG_ID" />
+          <ScalarProperty Name="BEGIN_DIST" ColumnName="BEGIN_DIST" />
+          <ScalarProperty Name="END_DIS" ColumnName="END_DIS" />
+          <ScalarProperty Name="BUILD_DATE" ColumnName="BUILD_DATE" />
+          <ScalarProperty Name="LAYER_THICK" ColumnName="LAYER_THICK" />
+          <ScalarProperty Name="LAYER__MAT" ColumnName="LAYER_ MAT" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

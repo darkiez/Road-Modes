@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="RoadsModel2.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="ROAD_LAYERZ">
+    <Key>
+      <PropertyRef Name="SEG_ID" />
+    </Key>
+    <Property Name="SEG_ID" Type="int" Nullable="false" />
+    <Property Name="BEGIN_DIST" Type="int" />
+    <Property Name="END_DIS" Type="int" />
+    <Property Name="BUILD_DATE" Type="date" />
+    <Property Name="LAYER_THICK" Type="int" />
+    <Property Name="LAYER_ MAT" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityContainer Name="RoadsModel2StoreContainer">
+    <EntitySet Name="ROAD_LAYERZ" EntityType="Self.ROAD_LAYERZ" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

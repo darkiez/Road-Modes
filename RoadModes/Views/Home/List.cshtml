@@ -1,0 +1,73 @@
+﻿@model IEnumerable<RoadModes.Models.Roadez>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>List</title>
+</head>
+<body>
+    <p>
+        @Html.ActionLink("Home", "Add")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.SEG_ID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BEGIN_DIST)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.END_DIST)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BUILD_DATE)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LAYER_THICK)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LAYER_MAT)
+            </th>
+            
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SEG_ID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.BEGIN_DIST)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.END_DIST)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.BUILD_DATE)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LAYER_THICK)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LAYER_MAT)
+                </td>
+               
+                <td>
+                    @Html.ActionLink("Edit", "Home", "Edit", new { id=item.SEG_ID}) |
+                    @Html.ActionLink("Delete", "Delete", "Home", new { id=item.SEG_ID})
+                </td>
+            </tr>
+        }
+
+    </table>
+</body>
+</html>
